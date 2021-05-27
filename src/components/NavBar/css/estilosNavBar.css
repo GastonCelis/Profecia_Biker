@@ -1,0 +1,45 @@
+.encabezado{
+    display: flex;
+    flex-wrap: row nowrap;
+    width: 100%;
+    padding: 1.5em;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.13);
+}
+
+.titulo{
+    color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo span{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu a{
+    text-decoration: none;
+    transition: all 400ms;
+}
+
+.menu a:hover{
+    transform: scale(1.2);
+    transition: all 400ms;
+}
+
+.menu a p{
+    color: red;
+    font-size: 1.5em;
+    margin: 0 0 0 1em;
+}
+
