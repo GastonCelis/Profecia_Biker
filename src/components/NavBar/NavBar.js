@@ -1,6 +1,6 @@
 import React from "react";
-import  "./css/estilosNavBar.css";
-import logo from "./multimedia/imagenes/logoprofeciabiker.png";
+import  "./estilosNavBar.css";
+import logo from "./logoprofeciabiker.png";
 
 const NavBar = () => {
     return ( 
