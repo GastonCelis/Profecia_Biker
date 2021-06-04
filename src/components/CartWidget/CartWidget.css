@@ -1,0 +1,17 @@
+.carrito{
+    color: red;
+    border: 1px solid gray;
+    margin: 2rem;
+    padding: 0.5em;
+    border-radius: 10%;
+    font-size: 1em;
+    transition: all 400ms;
+    text-decoration: none;
+}
+
+.carrito:hover{
+    transform: scale(1.1);
+    transition: all 400ms;
+    color: red;
+    border: 1px solid black;
+}
