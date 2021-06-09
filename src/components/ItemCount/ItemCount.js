@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
 import "./ItemCount.css"
 
-const ItemCount = ({initial, stock}) => {
+const ItemCount = ({initial, stock, onAdd}) => {
     const [item, setItem] = useState(initial) 
 
     const addItem = ()=> {
@@ -16,11 +16,6 @@ const ItemCount = ({initial, stock}) => {
         
     }
 
-    const cart = ()=> {
-        alert("Se agregó " + item +" item/s al carrito")
-        
-    }
-
     return (
         <div className="contenedor-contador">
             <h5>CONTADOR DE ITEMS</h5>
@@ -29,7 +24,7 @@ const ItemCount = ({initial, stock}) => {
                 <span>{item}</span>
                 <i className="bi bi-arrow-right-square" onClick={addItem}></i>
             </div>
-            <button onClick={cart}>Agregar al Carrito</button>
+            <button onClick={onAdd}>Agregar al Carrito</button>
         </div>
     )
 }
