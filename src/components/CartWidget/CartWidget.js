@@ -4,7 +4,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 
 
 const CartWidget = () => {
-    return ( 
+    return (
         <a href="#" className="carrito">
             <i className="bi bi-cart"></i>
         </a>

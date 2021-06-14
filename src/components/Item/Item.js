@@ -1,11 +1,12 @@
-import React, {useState, useEfefect} from "react";
+import React from "react";
+import "./Item.css"
 
-const Item = (imagen, nombre, precio, stock, id) => {
+const Item = ({imagen, nombre, precio, stock, id}) => {
     return (
-        <div>
-            <img sfc={imagen}></img>
-            <h3>Producto: {nombre}</h3>
-            <p>Precio: {precio}</p>
+        <div className="tarjeta-item">
+            <img src={imagen} alt={nombre}></img>
+            <h3>{nombre}</h3>
+            <p>Precio: ${precio}</p>
             <p>Stock: {stock}</p>
         </div>
     );

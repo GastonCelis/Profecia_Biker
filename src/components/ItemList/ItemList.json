@@ -1,9 +1,10 @@
-[{"id": 0, "nombre": "Campera Moto Regular", "precio": "11000", "stock": 10, "imagen":"campera_moto_regular.jpg"},
-    {"id": 1, "nombre": "Campera Moto 4 Estaciones", "precio": "21000", "stock": 7, "imagen":"campera_moto_4_estaciones.jpg"},
-    {"id": 2, "nombre": "Casco MT", "precio": "8000", "stock": 15, "imagen":"casco_mt.jpg"},
-    {"id": 3, "nombre": "Casco LS2", "precio": "12000", "stock": 11, "imagen":"casco_ls2.jpg"},
-    {"id": 4, "nombre": "Guantes Invierno", "precio": "6000", "stock": 10, "imagen":"guantes_moto_invierno.jpg"},
-    {"id": 5, "nombre": "Guantes Regular", "precio": "2000", "stock": 50, "imagen":"guantes_moto_regular.jpg"},
-    {"id": 6, "nombre": "Pantalon Moto Regular", "precio": "9000", "stock": 10, "imagen":"pantalon_moto_regular.jpg"},
-    {"id": 7, "nombre": "Pantalon Moto 4 Estaciones", "precio": "20000", "stock": 7, "imagen":"pantalon_moto_4_estaciones.jpg"}
+[
+    {"id": 0, "nombre": "Campera Moto Regular", "precio": "11000", "stock": 10, "imagen":"https://d3ugyf2ht6aenh.cloudfront.net/stores/001/069/610/products/predatorm11-787863a31cfac2c32c15925716484683-1024-1024.jpg"},
+    {"id": 1, "nombre": "Campera Moto 4 Estaciones", "precio": "21000", "stock": 7, "imagen":"https://d3ugyf2ht6aenh.cloudfront.net/stores/001/065/501/products/whatsapp-image-2020-10-23-at-10-01-09-61-c29142e9da0bd36b4016034587601203-1024-1024.jpeg"},
+    {"id": 2, "nombre": "Casco MT", "precio": "8000", "stock": 15, "imagen":"https://cdn.osabana.com/adrianstore/productos/17328_11812.jpeg"},
+    {"id": 3, "nombre": "Casco LS2", "precio": "12000", "stock": 11, "imagen":"https://citymotor.com.ar/wp-content/uploads/2019/07/Casco-LS2-Rookie-352.jpg"},
+    {"id": 4, "nombre": "Guantes Invierno", "precio": "6000", "stock": 10, "imagen":"https://www.tiendamotocenter.com/27008-thickbox_default/guantes-moto-dainese-nebula-gore-tex-para-mujer.jpg"},
+    {"id": 5, "nombre": "Guantes Regular", "precio": "2000", "stock": 50, "imagen":"https://cdn.autobild.es/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2015/05/419443-seis-claves-guantes-moto.jpg?itok=ILwaAkJx"},
+    {"id": 6, "nombre": "Pantalon Moto Regular", "precio": "9000", "stock": 10, "imagen":"https://www.motoideas.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/p/a/pantalon_garibaldi_cool_typhoon_hombre.jpg"},
+    {"id": 7, "nombre": "Pantalon Moto 4 Estaciones", "precio": "20000", "stock": 7, "imagen":"https://www.motocat.net/3093-thickbox/pantalon-de-cordura-compilo-cm-1054.jpg"}
 ]
