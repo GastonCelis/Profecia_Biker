@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.js";
 import "./ItemCount.css"
 
 const ItemCount = ({initial, stock, onAdd}) => {

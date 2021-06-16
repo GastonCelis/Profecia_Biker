@@ -1,8 +1,6 @@
 import React from "react";
 import "./NavBar.css";
 import logo from "./logoprofeciabiker.png";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.js";
 import CartWidget from "../CartWidget/CartWidget.js";
 
 
@@ -10,6 +8,7 @@ const NavBar = () => {
     return ( 
         <nav className="navbar navbar-expand-lg navbar-light">
             <a className="navbar-brand" href="#"><img src={logo} alt="Logo Profecia Biker"></img></a>
+            <CartWidget/>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
@@ -31,8 +30,6 @@ const NavBar = () => {
                     </div>
                 </div>
             </div>
-
-            <CartWidget/>
         </nav>
     );
 }

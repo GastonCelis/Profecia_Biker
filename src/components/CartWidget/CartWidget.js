@@ -1,6 +1,6 @@
 import React from "react";
 import "./CartWidget.css";
-import "bootstrap-icons/font/bootstrap-icons.css";
+
 
 
 const CartWidget = () => {
