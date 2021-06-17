@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import ItemListjson from "./ItemList.json"
+import ItemListjson from "../../assets/ItemList.json"
 import Item from "../Item/Item"
 
 const ItemList = () => {

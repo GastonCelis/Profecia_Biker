@@ -1,25 +1,25 @@
 import React, {useState, useEffect} from "react";
-import DetalleItem from "../ItemDetail/ItemDetail";
+import ItemDetail from "../ItemDetail/ItemDetail";
+import ItemListjson from "../../assets/ItemList.json"
 
-const ObetenerItem = ()=> {
+const ItemDetailContainer = ()=> {
     const [item, setItem] = useState([]);
     useEffect(()=>{
         const itemObtenido = new Promise ((resolve, reject) => {
             setTimeout(()=>{
-                resolve(DetalleItem)
+                resolve(ItemListjson)
             }, 2000);
         })
         itemObtenido.then(resultado =>{
-            setItem(resultado)
+            setItem(resultado[1])
         })
     }, []);
     
     return(
         <div>
-            {item}
+            <ItemDetail imagen={item.imagen} nombre={item.nombre} espec1={item.espec1} espec2={item.espec2} espec3={item.espec3} espec4={item.espec4} espec5={item.espec5} talle1={item.talle1} talle2={item.talle2} talle3={item.talle3} precio={item.precio} stock={item.stock} key={item.id}/>
         </div>
-        
     )
 }
 
-export default ObetenerItem
+export default ItemDetailContainer

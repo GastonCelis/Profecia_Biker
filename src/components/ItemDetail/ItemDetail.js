@@ -1,30 +1,30 @@
 import React from "react";
 import "./ItemDetail.css"
 
-const detalleItem = () => {
+const ItemDetail = ({imagen, nombre, espec1, espec2, espec3, espec4, espec5, talle1, talle2, talle3, precio, stock}) => {
     return (
         <div className="contenedor-item-detalle">
             <div className="imagen-item">
-                <img src="https://motosprint.com/media/catalog/product/cache/1/thumbnail/1000x1000/9df78eab33525d08d6e5fb8d27136e95/c/a/casco-ls2-ff800-storm-racer-blue-red-.01.motosprint.com.jpg" alt="Casco LS2"></img>
+                <img src={imagen} alt={nombre}></img>
             </div>
-            <h3>Casco Integral LS2 RBCN</h3>
+            <h3>{nombre}</h3>
             <div>
                 <ul>
-                    <li>Visor anti rayas con enganche para alta velocidad.</li>
-                    <li>Lente de sol interno anti rayas.</li>
-                    <li>Pinlock</li>
-                    <li>3 Ventilaciones de aire.</li>
-                    <li>Interior confortable con goma espuma relajante.</li>
+                    <li>{espec1}</li>
+                    <li>{espec2}</li>
+                    <li>{espec3}</li>
+                    <li>{espec4}</li>
+                    <li>{espec5}</li>
                 </ul>
                 <div>
                     <label>Talles</label>
                     <div>
-                        <button>M</button><button>L</button><button>XL</button>
+                        <button>{talle1}</button><button>{talle2}</button><button>{talle3}</button>
                     </div>
                     <a href="#">Ver Tabla de Talles</a>
                 </div>
-                <p className="precio-item">Precio: $18000</p>
-                <p>Stock: 15</p>
+                <p className="precio-item">Precio: ${precio}</p>
+                <p>Stock: {stock}</p>
                 <div className="boton-carrito">
                     <button>Agregar al Carrito</button>
                 </div>
@@ -33,4 +33,4 @@ const detalleItem = () => {
     );
 }
 
-export default detalleItem;
+export default ItemDetail;
