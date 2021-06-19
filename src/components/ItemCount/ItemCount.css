@@ -1,18 +1,9 @@
 .contenedor-contador{
-    background-image: linear-gradient(to bottom, #ff0000, #ff517f, #ff97d2, #f8d1fc, #ffffff);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column;
-    width: max-content;
-    margin: 3em;
-    border-radius: 2%;
-    border: 1px solid red;
+    width: 100%;
 }
 
 .contenedor-contador h5{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, bold;
-    margin: 2em;
     color: white;
 }
 
@@ -21,9 +12,9 @@
     font-weight: bold;
     border-radius: 3%;
     color: white;
-    margin-bottom: 1.5em;
     padding: 0.5em;
     border: 1px solid rgb(32, 80, 32);
+    width: 100%;
 }
 
 .items{
@@ -33,7 +24,6 @@
     justify-content: space-evenly;
     align-content: center;
     margin-bottom: 2em;
-    background-color: rgba(255, 255, 255, 0.726);
     border-radius: 2%;
 }
 

@@ -1,0 +1,39 @@
+.item-box{
+    border: 1px solid red;
+    margin: 2em;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.nombre-item{
+    text-align: center;
+    padding: 1em;
+    color: red;
+    text-decoration: none;
+    transition: all 500ms;
+}
+
+.nombre-item:hover{
+    transition: all 500ms;
+    color: rgb(131, 0, 0);
+    transform: scale(1.2);
+}
+
+.item-box-padre{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
