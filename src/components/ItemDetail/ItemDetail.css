@@ -55,7 +55,7 @@
     border-radius: 3%;
     padding: 0.5em;
     border: 1px solid rgba(255, 0, 0, 0.404);
-    margin: 0 0.5em 0 0.5em;
+    margin: 1em 0.5em 1em 0.5em;
     width: 3em;
     transition: all 400ms;
 }

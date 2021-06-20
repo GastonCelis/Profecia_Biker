@@ -16,10 +16,19 @@
     margin-top: 0.5em;
 }
 
-.contenedor-itemlist{
+.item-box-padre{
     width: 100%;
     display: flex;
-    flex-flow: column;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    margin-top: 4em;
+}
+
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
