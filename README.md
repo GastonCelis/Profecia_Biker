@@ -8,9 +8,12 @@ Somos una página **Ecommerce** *SPA (Single Page Application)*, hecha en React 
 ## Estado del repositorio
 Actualmente el repositorio se encuentra en **desarrollo fase alpha**.
 
-## Visuales
+## Imagenes
 <img src="src\assets\imagenes\capturaProfecia1.jpg"></img>
 <img src="src\assets\imagenes\capturaProfecia2.jpg"></img>
+
+## GIF
+<img src="src\assets\videos\ProfeciaBikerNavegacion.gif"></img>
 
 ## Instalación
 * Se necesita tener instaldo *Node JS* (Node JS es un entorno de ejecución de JavaScript).

@@ -50,11 +50,6 @@ const ItemListContainer = () => {
                 </div>
             }
         </div>
-        
-        
-            
-        
-        
     )
 }
 
