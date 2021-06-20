@@ -1,6 +1,12 @@
 .contenedor-item-detalle{
     border: solid 2px red;
-    width: 100%;
+    width: 50%;
+}
+
+.contenedor-padre-item-detalle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .imagen-item{
@@ -29,7 +35,7 @@
     font-weight: bold;
 }
 
-.contenedor-item-detalle div div{
+.seccion-talles{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,12 +45,12 @@
     padding-top: 0.5em;
 }
 
-.contenedor-item-detalle div div div{
+.seccion-talles div{
     display: flex;
     flex-flow: row nowrap;
 }
 
-.contenedor-item-detalle div div div button{
+.boton-talle{
     background-color: white;
     border-radius: 3%;
     padding: 0.5em;
@@ -54,28 +60,21 @@
     transition: all 400ms;
 }
 
-.contenedor-item-detalle div div div button:hover{
+.boton-talle:hover{
     transform: scale(1.1);
     transition: all 400ms;
 }
 
-.boton-carrito{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.contador-item-detalle{
+    padding: 1em;
 }
 
-.boton-carrito button{
-    background-color: green;
-    border-radius: 3%;
-    color: white;
-    padding: 0.5em;
-    border: 1px solid rgb(32, 80, 32);
+.contador-item-detalle button{
     transition: all 500ms;
 }
 
-.boton-carrito button:hover{
-    transform: scale(1.2);
+.contador-item-detalle button:hover{
+    transform: scale(1.1);
     transition: all 500ms;
 }
 

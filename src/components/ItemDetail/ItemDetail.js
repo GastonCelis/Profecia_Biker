@@ -1,35 +1,39 @@
 import React from "react";
+import ItemCount from "../ItemCount/ItemCount"
 import "./ItemDetail.css"
 
-const ItemDetail = ({porps}) => {
+const ItemDetail = ({props}) => {
     return (
-        <div className="contenedor-item-detalle">
-            <div className="imagen-item">
-                <img src={porps.imagen} alt={porps.nombre}></img>
-            </div>
-            <h3>{porps.nombre}</h3>
-            <div>
-                <ul>
-                    <li>{porps.espec1}</li>
-                    <li>{porps.espec2}</li>
-                    <li>{porps.espec3}</li>
-                    <li>{porps.espec4}</li>
-                    <li>{porps.espec5}</li>
-                </ul>
-                <div>
-                    <label>Talles</label>
-                    <div>
-                        <button>{porps.talle1}</button><button>{porps.talle2}</button><button>{porps.talle3}</button>
-                    </div>
-                    <a href="#">Ver Tabla de Talles</a>
+        <div className="contenedor-padre-item-detalle">
+            <div className="contenedor-item-detalle">
+                <div className="imagen-item">
+                    <img src={props.imagen} alt={props.nombre}></img>
                 </div>
-                <p className="precio-item">Precio: ${porps.precio}</p>
-                <p>Stock: {porps.stock}</p>
-                <div className="boton-carrito">
-                    <button>Agregar al Carrito</button>
+                <h3>{props.nombre}</h3>
+                <div>
+                    <ul>
+                        <li>{props.espec1}</li>
+                        <li>{props.espec2}</li>
+                        <li>{props.espec3}</li>
+                        <li>{props.espec4}</li>
+                        <li>{props.espec5}</li>
+                    </ul>
+                    <div className="seccion-talles">
+                        <label>Talles</label>
+                        <div>
+                            <button className="boton-talle">{props.talle1}</button><button className="boton-talle">{props.talle2}</button><button className="boton-talle">{props.talle3}</button>
+                        </div>
+                        <a href="#">Ver Tabla de Talles</a>
+                    </div>
+                    <p className="precio-item">Precio: ${props.precio}</p>
+                    <p>Stock: {props.stock}</p>
+                    <div className="contador-item-detalle">
+                        <ItemCount initial={0} stock={props.stock}/>
+                    </div>
                 </div>
             </div>
         </div>
+        
     );
 }
 

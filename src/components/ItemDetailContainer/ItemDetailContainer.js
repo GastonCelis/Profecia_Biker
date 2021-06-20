@@ -34,7 +34,7 @@ const ItemDetailContainer = ()=> {
                 </div>
                 :
                 <div>
-                    <ItemDetail porps={item} key={item.id}/>
+                    <ItemDetail props={item} key={item.id}/>
                 </div>
             }
         </div>
