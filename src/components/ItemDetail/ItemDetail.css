@@ -85,3 +85,12 @@
     width: 100%;
     text-align: center;
 }
+
+.boton-terminar-compra{
+    background-color: green;
+    border-radius: 3%;
+    color: white;
+    padding: 0.5em;
+    border: 1px solid rgb(32, 80, 32);
+    width: 100%;
+}

@@ -6,24 +6,21 @@ import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import "./ItemDetailContainer.css";
 
 const ItemDetailContainer = ()=> {
-
     const {id} = useParams()
     const [item, setItem] = useState([]);
     const [load, setLoad] = useState(false)
     useEffect(()=>{
         setLoad(true)
-        setTimeout(()=>{
-            setLoad(false)
-        }, 2001)
         const itemObtenido = new Promise ((resolve, reject) => {
             setTimeout(()=>{
                 resolve(ItemListjson)
+                setLoad(false)
             }, 2000);
         })
         itemObtenido.then(resultado =>{
             setItem(resultado[`${id}`])
         })
-    }, []);
+    }, [id]);
     
     return(
         <div>

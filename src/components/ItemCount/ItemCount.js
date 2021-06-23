@@ -1,22 +1,14 @@
 import React, { useState } from 'react';
 import "./ItemCount.css"
 
-
-
-const ItemCount = ({initial, stock}) => {
-    const [item, setItem] = useState(initial) 
-    const onAdd = ()=> {
-        alert("Se agregó/aron " + item + " item/s al carrito")
-        
-    }
+const ItemCount = ({initial, stock, onAdd}) => {
+    const [item, setItem] = useState(initial)
     const addItem = ()=> {
         item < stock ? setItem(item + 1) : alert("No hay Mas Stock")
-        
     }
 
     const removeItem = ()=> {
         item > initial ? setItem(item - 1) : alert("No puedes seleccionar menos Items")
-        
     }
 
     return (
@@ -26,10 +18,11 @@ const ItemCount = ({initial, stock}) => {
                 <span>{item}</span>
                 <i className="bi bi-arrow-right-square" onClick={addItem}></i>
             </div>
-            <button onClick={onAdd}>Agregar al Carrito</button>
+            <button onClick={()=>onAdd(item)}>Agregar al Carrito</button>
         </div>
     )
 }
 
 export default ItemCount
+
 

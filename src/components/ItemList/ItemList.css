@@ -29,3 +29,12 @@
     justify-content: center;
     align-content: center;
 }
+
+.item-imagen{
+    text-decoration: none;
+    color: red;
+}
+
+.item-imagen:hover{
+    color: rgb(131, 0, 0);
+}

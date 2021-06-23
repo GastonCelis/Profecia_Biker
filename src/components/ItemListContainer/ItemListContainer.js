@@ -11,9 +11,6 @@ const ItemListContainer = () => {
     const [load, setLoad] = useState(false)
     useEffect(()=>{
         setLoad(true)
-        setTimeout(()=>{
-            setLoad(false)
-        }, 2001)
         const item = new Promise((resolve, reject) => {
             setTimeout(()=> {
                 resolve(ItemListjson)
@@ -21,6 +18,7 @@ const ItemListContainer = () => {
         })
         item.then(resultado =>{
             setProducto(resultado)
+            setLoad(false)
         })
     }, []);
 
@@ -37,7 +35,9 @@ const ItemListContainer = () => {
                 <div className="item-box-padre">
                     {producto.map(elemento =>{
                         if (elemento.categoria === id){
-                            <ItemList props={elemento} key={elemento.id}/>
+                            return(
+                                <ItemList props={elemento} key={elemento.id}/>
+                            )
                         }
                         else{
                             return(
