@@ -36,10 +36,12 @@ const ItemListContainer = () => {
                     {producto.map(elemento =>{
                         if (elemento.categoria === id){
                             return(
-                                <ItemList props={elemento} key={elemento.id}/>
+                                <div>
+                                    <ItemList props={elemento} key={elemento.id}/>
+                                </div>
                             )
                         }
-                        else{
+                        else if (id === undefined){
                             return(
                                 <div>
                                     <ItemList props={elemento} key={elemento.id}/>

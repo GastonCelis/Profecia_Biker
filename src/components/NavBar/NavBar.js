@@ -21,8 +21,8 @@ const NavBar = () => {
                             Tienda
                         </NavLink>
                         <div className="dropdown-menu menu-desplegable" aria-labelledby="navbarDropdownMenuLink">
-                            <NavLink exact to={"/category/1"} activeClassName="activo" className="dropdown-item">Cascos</NavLink>
-                            <NavLink exact to={"/category/2"} activeClassName="activo" className="dropdown-item" >Indumentaria</NavLink>
+                            <NavLink exact to={"/category/2"} activeClassName="activo" className="dropdown-item">Cascos</NavLink>
+                            <NavLink exact to={"/category/1"} activeClassName="activo" className="dropdown-item" >Indumentaria</NavLink>
                         </div>
                     </div>
                 </div>

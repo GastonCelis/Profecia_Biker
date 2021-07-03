@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState} from "react";
+import { useState } from "react";
 import ItemCount from "../ItemCount/ItemCount"
 import "./ItemDetail.css"
 
@@ -45,7 +45,6 @@ const ItemDetail = ({props}) => {
                 </div>
             </div>
         </div>
-        
     );
 }
 
