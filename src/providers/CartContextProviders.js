@@ -6,16 +6,23 @@ const productos = ItemListjson
 
 const CartContextProviders = ({ children }) => {
     const [ items, setItems] = useState(productos)
-    const [ cart, setCart ] = useState([])
+    const [ cart, setCart ] = useState({})
 
-    function removeItem(ItemId){
-        
+    function removeItem(itemId){
+        const removeItem = cart.filter(prod => prod.id !== itemId)
+        setCart(removeItem)
     }
 
-    function isnItem(){}
+    function cleanCart(){
+        setCart([])
+    }
+
+    function isnItem(){
+
+    }
 
     return (
-        <CartContext.Provider value={{cart, setCart, items, setItems}}>
+        <CartContext.Provider value={{cart, setCart, items, setItems, removeItem, cleanCart, isnItem}}>
             {children}
         </CartContext.Provider>
     )
