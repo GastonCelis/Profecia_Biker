@@ -29,7 +29,7 @@ const Cart = () => {
                                     <td>$ {elemento.infoProductos.precio}</td>
                                     <td>{elemento.cantidad}</td>
                                     <td>$ {`${elemento.cantidad * elemento.infoProductos.precio}`}</td>
-                                    <td><button type="button" className="btn btn-danger boton-eliminar" onClick={()=>removeItem(elemento.infoProductos.id)}><i class="bi bi-trash icono-eliminar"></i></button></td>
+                                    <td><button type="button" className="btn btn-danger boton-eliminar" onClick={()=>removeItem(elemento.infoProductos.id)}><i className="bi bi-trash icono-eliminar"></i></button></td>
                                 </tr>
                             </tbody>
                         </table>

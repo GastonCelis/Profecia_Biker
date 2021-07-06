@@ -34,14 +34,14 @@ const ItemDetail = ({id}) => {
                         <div>
                             <button className="boton-talle">{productos[id].talle1}</button><button className="boton-talle">{productos[id].talle2}</button><button className="boton-talle">{productos[id].talle3}</button>
                         </div>
-                        <Link to="">Ver Tabla de Talles</Link>
+                        <Link to="#">Ver Tabla de Talles</Link>
                     </div>
                     <p className="precio-item">Precio: ${productos[id].precio}</p>
                     <p>Stock: {productos[id].stock}</p>
                     <div className="contador-item-detalle">
                         {
                             cantidad === 0 ?
-                            (<ItemCount initial={1} stock={productos[id].stock} onAdd={onAdd}/>)
+                            (<ItemCount initial={1} stock={productos[id].stock} onAdd={onAdd} key={id}/>)
                             :
                             (<Link exact to={"/cart"}><button className="boton-terminar-compra">Terminar Compra</button></Link>)
                         }

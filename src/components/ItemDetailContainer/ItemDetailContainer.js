@@ -19,7 +19,7 @@ const ItemDetailContainer = ()=> {
             {
                 load ?
                 <div className="loader">
-                    <ClimbingBoxLoader color={"#FF001F"} size={80}/>
+                    <ClimbingBoxLoader color={"#FF001F"} size={80} key={id}/>
                 </div>
                 :
                 <div>
