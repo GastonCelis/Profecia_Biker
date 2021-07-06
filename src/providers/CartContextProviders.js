@@ -2,27 +2,40 @@ import React, {useState} from "react";
 import CartContext from "../context/CartContext";
 import ItemListjson from "../assets/informacion/ItemList.json"
 
-const productos = ItemListjson
+const CartContextProviders = ({ defaultValue = [], children }) => {
+    const productos = ItemListjson
+    const [ cart, setCart ] = useState(defaultValue)
 
-const CartContextProviders = ({ children }) => {
-    const [ items, setItems] = useState(productos)
-    const [ cart, setCart ] = useState({})
+    function isInCart(item) {
+        let product = cart.find(element => element.infoProductos.id === item.id)
+        let isInCart = false
+        console.log(product)
+        return product === undefined ? (isInCart) : (isInCart = true);
+
+    }
 
     function removeItem(itemId){
-        const removeItem = cart.filter(prod => prod.id !== itemId)
+        const removeItem = cart.filter(prod => prod.infoProductos.id !== itemId)
         setCart(removeItem)
     }
 
-    function cleanCart(){
+    function clear(){
         setCart([])
     }
 
-    function isnItem(){
-
+    function addItem(items){
+        if(isInCart(items) === true){
+            console.log("El Producto ya esta en el carrito")
+        }
+        else{
+            setCart([...cart, items])
+        }
     }
 
+    console.log(cart)
+
     return (
-        <CartContext.Provider value={{cart, setCart, items, setItems, removeItem, cleanCart, isnItem}}>
+        <CartContext.Provider value={{cart, productos, addItem, removeItem, clear, cartSize: cart.length}}>
             {children}
         </CartContext.Provider>
     )

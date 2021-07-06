@@ -5,8 +5,7 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer.
 import "./App.css"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
 import CartContextProviders from "./providers/CartContextProviders.js";
-
-
+import Cart from "./components/Cart/Cart"
 
 function App() {
   return (
@@ -25,7 +24,7 @@ function App() {
               <ItemDetailContainer/>
             </Route>
             <Route exact path="/cart">
-              
+              <Cart/>
             </Route>
           </Switch>
         </BrowserRouter>
