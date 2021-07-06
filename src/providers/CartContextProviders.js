@@ -32,8 +32,6 @@ const CartContextProviders = ({ defaultValue = [], children }) => {
         }
     }
 
-    console.log(cart)
-
     return (
         <CartContext.Provider value={{cart, productos, addItem, removeItem, clear, cartSize: cart.length}}>
             {children}
