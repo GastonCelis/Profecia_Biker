@@ -7,7 +7,7 @@ const CartContextProviders = ({ defaultValue = [], children }) => {
     const [ cart, setCart ] = useState(defaultValue)
 
     function isInCart(item) {
-        let product = cart.find(element => element.infoProductos.id === item.id)
+        let product = cart.find(element => element.infoProductos.id === item.infoProductos.id)
         let isInCart = false
         console.log(product)
         return product === undefined ? (isInCart) : (isInCart = true);
