@@ -7,7 +7,7 @@ import CartWidget from "../CartWidget/CartWidget.js";
 
 const NavBar = () => {
     return ( 
-        <nav className="navbar navbar-expand-lg navbar-light container">
+        <nav className="navbar navbar-expand-lg navbar-light container posicion-navbar">
             <Link className="navbar-brand" exact to={"/"}><img src={logo} alt="Logo Profecia Biker" className="img-fluid"></img></Link>
             <CartWidget/>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

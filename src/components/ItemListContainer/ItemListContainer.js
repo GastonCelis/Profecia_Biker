@@ -1,24 +1,25 @@
 import React, {useState, useEffect} from "react";
-import ItemListjson from "../../assets/informacion/ItemList.json"
+import { useParams } from "react-router-dom";
 import ItemList from "../ItemList/ItemList"
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+import {getFirestore} from "../../factory/Firebase"
 import "./ItemListContainer.css"
-import { useParams } from "react-router-dom";
+
 
 const ItemListContainer = () => {
     const {id} = useParams()
     const [producto, setProducto] = useState([]);
-    const [load, setLoad] = useState(false)
+    const [load, setLoad] = useState(true)
     useEffect(()=>{
-        setLoad(true)
-        const item = new Promise((resolve, reject) => {
-            setTimeout(()=> {
-                resolve(ItemListjson)
-            }, 2000);
-        })
-        item.then(resultado =>{
-            setProducto(resultado)
-            setLoad(false)
+        const db = getFirestore();
+        const itemCollection = db.collection("items")
+        itemCollection.get().then((querySnapshot)=>{
+            if(querySnapshot.size === 0){
+                console.log("No hay resultados");
+                setLoad(false);
+            }
+            setProducto(querySnapshot.docs.map(doc => doc.data()));
+            setLoad(false);
         })
     }, []);
 

@@ -1,18 +1,13 @@
-import React, {useState, useEffect} from "react";
+import React, {useContext} from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+import CartContext from "../../context/CartContext";
 import "./ItemDetailContainer.css";
 
 const ItemDetailContainer = ()=> {
-    const {id} = useParams()
-    const [load, setLoad] = useState(false)
-    useEffect(()=>{
-        setLoad(true)
-        setTimeout(()=>{
-            setLoad(false)
-        }, 2000);
-    }, [id]);
+    const {id} = useParams() 
+    const {load} = useContext(CartContext)
     
     return(
         <div>

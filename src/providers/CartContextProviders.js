@@ -1,10 +1,24 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import CartContext from "../context/CartContext";
-import ItemListjson from "../assets/informacion/ItemList.json"
+import {getFirestore} from "../factory/Firebase"
 
 const CartContextProviders = ({ defaultValue = [], children }) => {
-    const productos = ItemListjson
+    const [ productos, setProductos ] = useState([])
+    const [ load, setLoad ] = useState(true)
     const [ cart, setCart ] = useState(defaultValue)
+
+    useEffect(()=>{
+        const db = getFirestore();
+        const itemCollection = db.collection("items")
+        itemCollection.get().then((querySnapshot)=>{
+            if(querySnapshot.size === 0){
+                console.log("No hay resultados");
+                setLoad(false);
+            }
+            setProductos(querySnapshot.docs.map(doc => doc.data()));
+            setLoad(false);
+        })
+    }, []);
 
     function isInCart(item) {
         let product = cart.find(element => element.infoProductos.id === item.infoProductos.id)
@@ -37,7 +51,7 @@ const CartContextProviders = ({ defaultValue = [], children }) => {
     }
 
     return (
-        <CartContext.Provider value={{cart, productos, addItem, removeItem, clear, comprar, cartSize: cart.length}}>
+        <CartContext.Provider value={{cart, productos, addItem, removeItem, clear, comprar, load, cartSize: cart.length}}>
             {children}
         </CartContext.Provider>
     )

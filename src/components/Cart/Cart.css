@@ -39,3 +39,12 @@ tbody tr td{
 .container-botones-cart h2{
     color: green;
 }
+
+.posicion-navbar{
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1010;
+    background-color: white;
+}
