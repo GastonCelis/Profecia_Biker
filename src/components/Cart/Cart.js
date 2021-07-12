@@ -1,13 +1,21 @@
-import React, {useContext} from 'react'
+import React, {useContext, useState} from 'react'
 import CartContext from '../../context/CartContext'
 import "./Cart.css"
 
 const Cart = () => {
-    const {cart, removeItem, clear} = useContext(CartContext)
+    const {cart, removeItem, clear, comprar} = useContext(CartContext)
+    var total = 0
+    cart.forEach(elemento => {
+        total = (elemento.cantidad * elemento.infoProductos.precio) + total
+    });
 
     return (
         <div>
-            <button type="button" className="btn btn-danger boton-vaciar" onClick={clear}>Vaciar el Carrito</button>
+            <div className="container-botones-cart">
+                <button type="button" className="btn btn-danger boton-vaciar-comprar" onClick={clear}>Vaciar el Carrito</button>
+                <h2>TOTAL: $ {total}</h2>
+                <button type="button" className="btn btn-success boton-vaciar-comprar" onClick={comprar}>Comprar</button>
+            </div>
             {cart.map(elemento=>{
                 return(
                     <div>
@@ -18,7 +26,7 @@ const Cart = () => {
                                     <th>Nombre</th>
                                     <th>Precio</th>
                                     <th>Cantidad</th>
-                                    <th>Total</th>
+                                    <th>Sub-Total</th>
                                     <th></th>
                                 </tr>
                             </thead>

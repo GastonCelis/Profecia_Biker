@@ -11,7 +11,6 @@ const CartContextProviders = ({ defaultValue = [], children }) => {
         let isInCart = false
         console.log(product)
         return product === undefined ? (isInCart) : (isInCart = true);
-
     }
 
     function removeItem(itemId){
@@ -32,8 +31,13 @@ const CartContextProviders = ({ defaultValue = [], children }) => {
         }
     }
 
+    function comprar(){
+        alert("¡La Compra se realizó con éxito, muchas gracias por su compra!")
+        setCart([])
+    }
+
     return (
-        <CartContext.Provider value={{cart, productos, addItem, removeItem, clear, cartSize: cart.length}}>
+        <CartContext.Provider value={{cart, productos, addItem, removeItem, clear, comprar, cartSize: cart.length}}>
             {children}
         </CartContext.Provider>
     )
