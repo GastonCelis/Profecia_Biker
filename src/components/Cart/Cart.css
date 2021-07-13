@@ -48,3 +48,7 @@ tbody tr td{
     z-index: 1010;
     background-color: white;
 }
+
+.cart{
+    position: relative;
+}

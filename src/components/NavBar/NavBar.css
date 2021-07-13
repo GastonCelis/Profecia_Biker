@@ -3,22 +3,15 @@
     width: 100%;
 }
 
-.menu{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-}
-
 .sub-menu{
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .sub-menu a{
     color: red !important;
-    font-size: 20px;
+    font-size: 1.2em;
     transition: all 400ms;
     margin: 0.5em;
     text-align: center;
@@ -34,10 +27,9 @@
 }
 
 .menu-desplegable a{
-    font-size: 1rem;
+    font-size: 1em;
     text-align: center;
     margin: 1rem 0 1rem 0;
-    padding: 0;
 }
 
 .activo{

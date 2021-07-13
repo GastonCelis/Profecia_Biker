@@ -24,7 +24,7 @@ const ItemListContainer = () => {
     }, []);
 
     return (
-        <div>
+        <>
             <h1 className="titulo">Bienvenid@ Biker</h1>
             {
                 load ?
@@ -52,7 +52,7 @@ const ItemListContainer = () => {
                     })}
                 </div>
             }
-        </div>
+        </>
     )
 }
 

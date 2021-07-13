@@ -1,0 +1,22 @@
+.orden{
+    width: 90vw;
+    height: 90vh;
+    position: absolute;
+    top: 0;
+    left: 5%;
+    right: 5%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+.titulo-orden{
+    color: red;
+    margin-bottom: 1em;
+}
+
+.loader-orden{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

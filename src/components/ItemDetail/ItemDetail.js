@@ -23,11 +23,11 @@ const ItemDetail = ({id}) => {
                 <h3>{productos[id].nombre}</h3>
                 <div>
                     <ul>
-                        <li>{productos[id].espec1}</li>
-                        <li>{productos[id].espec2}</li>
-                        <li>{productos[id].espec3}</li>
-                        <li>{productos[id].espec4}</li>
-                        <li>{productos[id].espec5}</li>
+                        <li>{productos[id].detalle1}</li>
+                        <li>{productos[id].detalle2}</li>
+                        <li>{productos[id].detalle3}</li>
+                        <li>{productos[id].detalle4}</li>
+                        <li>{productos[id].detalle5}</li>
                     </ul>
                     <div className="seccion-talles">
                         <label>Talles</label>
