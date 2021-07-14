@@ -6,16 +6,22 @@ import "./Cart.css"
 const Cart = () => {
     const {cart, removeItem, clear} = useContext(CartContext)
     const [compra, setCompra] = useState(false)
-    console.log(cart)
-
-    const botonCompra = ()=>{
-        setCompra(true)
-    }
 
     var total = 0
     cart.forEach(elemento => {
         total = (elemento.cantidad * elemento.infoProductos.precio) + total
     });
+
+    const botonCompra = ()=>{
+        if (total === 0){
+            alert("El Carrito esta vacio no hay Items para comprar")
+        }
+        else{
+            setCompra(true)
+        }
+    }
+
+    
 
     return (
         <div className="cart">

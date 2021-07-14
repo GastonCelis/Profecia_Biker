@@ -22,6 +22,7 @@ const ItemDetailContainer = ()=> {
         })
     }, []);
     
+    console.log(producto)
     return(
         <div>
             {

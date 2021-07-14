@@ -2,14 +2,11 @@ import React, {useState} from "react";
 import CartContext from "../context/CartContext";
 
 const CartContextProviders = ({ defaultValue = [], children }) => {
-    const [ productos, setProductos ] = useState([])
-    const [ load, setLoad ] = useState(true)
     const [ cart, setCart ] = useState(defaultValue)
 
     function isInCart(item) {
         let product = cart.find(element => element.infoProductos.id === item.infoProductos.id)
         let isInCart = false
-        console.log(product)
         return product === undefined ? (isInCart) : (isInCart = true);
     }
 
@@ -37,7 +34,7 @@ const CartContextProviders = ({ defaultValue = [], children }) => {
     }
 
     return (
-        <CartContext.Provider value={{cart, productos, addItem, removeItem, clear, comprar, load, cartSize: cart.length}}>
+        <CartContext.Provider value={{cart, addItem, removeItem, clear, comprar, cartSize: cart.length}}>
             {children}
         </CartContext.Provider>
     )

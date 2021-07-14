@@ -7,7 +7,7 @@ import "./ItemDetail.css"
 const ItemDetail = ({id, productos}) => {
     const [cantidad, setCantidad] = useState(0)
     const {addItem} = useContext(CartContext)
-    const infoProductos = {id: productos[id].id, nombre: productos[id].nombre, precio: productos[id].precio, imagen: productos[id].imagen, stock: productos[id].stock}
+    const infoProductos = {id: productos[id].id, nombre: productos[id].nombre, precio: productos[id].precio, imagen: productos[id].imagen}
     
     const onAdd = (quantityToAdd)=>{
         setCantidad(parseInt(quantityToAdd))
