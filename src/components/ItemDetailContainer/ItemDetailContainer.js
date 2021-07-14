@@ -1,13 +1,26 @@
-import React, {useContext} from "react";
+import React, {useState, useEffect} from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
-import CartContext from "../../context/CartContext";
+import {getFirestore} from "../../factory/Firebase"
 import "./ItemDetailContainer.css";
 
 const ItemDetailContainer = ()=> {
     const {id} = useParams() 
-    const {load} = useContext(CartContext)
+    const [load, setLoad] = useState(true)
+    const [producto, setProducto] = useState([]);
+    useEffect(()=>{
+        const db = getFirestore();
+        const itemCollection = db.collection("items")
+        itemCollection.get().then((querySnapshot)=>{
+            if(querySnapshot.size === 0){
+                console.log("No hay resultados");
+                setLoad(false);
+            }
+            setProducto(querySnapshot.docs.map(doc => doc.data()));
+            setLoad(false);
+        })
+    }, []);
     
     return(
         <div>
@@ -18,7 +31,7 @@ const ItemDetailContainer = ()=> {
                 </div>
                 :
                 <div>
-                    <ItemDetail id={id} key={id}/>
+                    <ItemDetail id={id} productos={producto} key={id}/>
                 </div>
             }
         </div>
