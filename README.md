@@ -6,7 +6,20 @@
 Somos una página **Ecommerce** *SPA (Single Page Application)*, hecha en React JS, dedicada a la venta de productos para motociclistas.
 
 ## Estado del repositorio
-Actualmente el repositorio se encuentra en **desarrollo fase alpha**.
+Actualmente el repositorio se encuentra en **desarrollo**.
+
+## Herramientas Utilizadas
+- Bootstrap, version: 5.0.2
+- Bootstrap-icons, version: 1.5.0
+- SweetAlert2, version: 11.0.18
+- CSS 3
+- Firebase, version: 8.7.0
+- React JS, version: 17.0.2
+- React-Router-Dom, version: 5.2.0
+- React-scripts, version: 4.0.3
+- React-spinners, version: 0.11.0
+- Node JS, version: v14.15.3
+
 
 ## Imagenes
 <img src="src\assets\imagenes\capturaProfecia1.jpg"></img>

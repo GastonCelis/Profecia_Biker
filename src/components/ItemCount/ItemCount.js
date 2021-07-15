@@ -5,11 +5,11 @@ const ItemCount = ({initial, stock, onAdd}) => {
     const [item, setItem] = useState(initial)
 
     const moreItem = ()=> {
-        item < stock ? setItem(item + 1) : alert("No hay Mas Stock")
+        item < stock ? setItem(item + 1) : setItem(item)
     }
 
     const lessItem = ()=> {
-        item > initial ? setItem(item - 1) : alert("No puedes seleccionar menos Items")
+        item > initial ? setItem(item - 1) : setItem(item)
     }
 
     return (

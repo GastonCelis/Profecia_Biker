@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {getFirestore} from "../../factory/Firebase";
 import firebase from 'firebase/app';
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+import swal from "sweetalert2";
 import "./Orders.css"
 
 const Orders = ({cart, total, setCompra, clear}) => {
@@ -36,7 +37,15 @@ const Orders = ({cart, total, setCompra, clear}) => {
         order.add(newOrder).then(({id})=>{
             setLoad(false);
             setCompra(false);
-            alert(`Se realizó su compra el nro de orden es: ${id}`);
+            swal.fire({
+                title: "¡Se realizó su compra!",
+                text: `El número de orden es: ${id}`,
+                icon: "success",
+                confirmButtonText: "Aceptar",
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                allowEnterKey: false
+            });
         }).catch((error)=>{
             setLoad(false);
             console.log(error);

@@ -1,27 +1,10 @@
-import React, {useContext, useState} from 'react'
+import React, {useContext} from 'react'
 import CartContext from '../../context/CartContext'
 import Orders from '../Orders/Orders'
 import "./Cart.css"
 
 const Cart = () => {
-    const {cart, removeItem, clear} = useContext(CartContext)
-    const [compra, setCompra] = useState(false)
-
-    var total = 0
-    cart.forEach(elemento => {
-        total = (elemento.cantidad * elemento.infoProductos.precio) + total
-    });
-
-    const botonCompra = ()=>{
-        if (total === 0){
-            alert("El Carrito esta vacio no hay Items para comprar")
-        }
-        else{
-            setCompra(true)
-        }
-    }
-
-    
+    const {cart, removeItem, clear, compra, botonCompra, total, setCompra} = useContext(CartContext)
 
     return (
         <div className="cart">
@@ -64,7 +47,6 @@ const Cart = () => {
                 :
                 <span></span>
             }
-            
         </div>
     )
 }

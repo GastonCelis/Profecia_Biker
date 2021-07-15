@@ -4,6 +4,19 @@ import CartContext from "../context/CartContext";
 const CartContextProviders = ({ defaultValue = [], children }) => {
     const [ cart, setCart ] = useState(defaultValue)
 
+    const [compra, setCompra] = useState(false)
+
+    var total = 0
+    cart.forEach(elemento => {
+        total = (elemento.cantidad * elemento.infoProductos.precio) + total
+    });
+
+    const botonCompra = ()=>{
+        if (total !== 0){
+            setCompra(true)
+        }
+    }
+
     function isInCart(item) {
         let product = cart.find(element => element.infoProductos.id === item.infoProductos.id)
         let isInCart = false
@@ -28,13 +41,9 @@ const CartContextProviders = ({ defaultValue = [], children }) => {
         }
     }
 
-    function comprar(){
-        alert("¡La Compra se realizó con éxito, muchas gracias por su compra!")
-        setCart([])
-    }
 
     return (
-        <CartContext.Provider value={{cart, addItem, removeItem, clear, comprar, cartSize: cart.length}}>
+        <CartContext.Provider value={{cart, addItem, removeItem, clear, compra, setCompra, botonCompra, total,  cartSize: cart.length}}>
             {children}
         </CartContext.Provider>
     )
