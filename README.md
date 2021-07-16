@@ -1,4 +1,4 @@
-<img src="src\assets\imagenes\logoprofeciabiker.png"></img>
+<img src="src\assets\imagenes\logoprofeciabiker.png">
 
 # ¡Bienvenido a Profecía Biker!
 
