@@ -24,33 +24,36 @@ const ItemListContainer = () => {
     }, []);
 
     return (
-        <>
-            <h1 className="titulo">Bienvenid@ Biker</h1>
+        <> 
             {
                 load ?
-                    <div className="loader">
+                    <div className="container-loader">
                         <ClimbingBoxLoader color={"#FF001F"} size={80} key={id}/>
                     </div>
                 :
-
-                <div className="item-box-padre">
-                    {producto.map(elemento =>{
-                        if (elemento.categoria === id){
-                            return(
-                                <div>
-                                    <ItemList props={elemento} key={elemento.id}/>
-                                </div>
-                            )
-                        }
-                        else if (id === undefined){
-                            return(
-                                <div>
-                                    <ItemList props={elemento} key={elemento.id}/>
-                                </div>
-                            )
-                        }
-                    })}
-                </div>
+                <>
+                    <header className="container">
+                        <h1 className="titulo">BIENVENIDO BIKER</h1>
+                    </header>
+                    <div className="item-box-padre">
+                        {producto.map(elemento =>{
+                            if (elemento.categoria === id){
+                                return(
+                                    <div>
+                                        <ItemList props={elemento} key={elemento.id}/>
+                                    </div>
+                                )
+                            }
+                            else if (id === undefined){
+                                return(
+                                    <div>
+                                        <ItemList props={elemento} key={elemento.id}/>
+                                    </div>
+                                )
+                            }
+                        })}
+                    </div>
+                </>
             }
         </>
     )

@@ -15,7 +15,7 @@ const Cart = () => {
             </div>
             {cart.map(elemento=>{
                 return(
-                    <div>
+                    <div className="container table-responsive">
                         <table className="table container">
                             <thead>
                                 <tr className="table-danger">

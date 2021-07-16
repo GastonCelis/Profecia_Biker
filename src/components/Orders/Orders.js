@@ -7,6 +7,11 @@ import "./Orders.css"
 
 const Orders = ({cart, total, setCompra, clear}) => {
     const [load, setLoad] = useState(false);
+
+    const closeOrder = ()=>{
+        setCompra(false)
+    }
+
     const [datos, setDatos] = useState({
         nombre: "",
         email: "",
@@ -63,7 +68,12 @@ const Orders = ({cart, total, setCompra, clear}) => {
                 </div>
                 :
                 <div>
+                    <div className="boton-cerrar-orden">
+                        <button className="btn btn-danger" onClick={()=> closeOrder()}>X</button>
+                    </div>
+                
                     <h2 className="titulo-orden">Complete los siguientes datos para finalizar la compra</h2>
+                    
                     <form>
                         <div className="mb-3">
                             <label for="exampleInputEmail1" className="form-label">Nombre</label>

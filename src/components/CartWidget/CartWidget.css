@@ -19,3 +19,8 @@
 .cantidad{
     margin-left: 1em;
 }
+
+.activo{
+    background-color: grey;
+    font-weight: bold;
+}

@@ -29,13 +29,6 @@ const ItemDetail = ({id, productos}) => {
                         <li>{productos[id].detalle4}</li>
                         <li>{productos[id].detalle5}</li>
                     </ul>
-                    <div className="seccion-talles">
-                        <label>Talles</label>
-                        <div>
-                            <button className="boton-talle">{productos[id].talle1}</button><button className="boton-talle">{productos[id].talle2}</button><button className="boton-talle">{productos[id].talle3}</button>
-                        </div>
-                        <Link to="#">Ver Tabla de Talles</Link>
-                    </div>
                     <p className="precio-item">Precio: ${productos[id].precio}</p>
                     <p>Stock: {productos[id].stock}</p>
                     <div className="contador-item-detalle">
