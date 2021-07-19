@@ -26,7 +26,7 @@ Actualmente el repositorio se encuentra en **desarrollo**.
 <img src="src\assets\imagenes\capturaProfecia2.jpg"></img>
 
 ## GIF
-<img src="src\assets\videos\navegacionProfeciaBiker.gif"></img>
+<img src="src\assets\videos\proyecto_profecia_biker.gif"></img>
 
 ## Instalación
 * Se necesita tener instaldo *Node JS* (Node JS es un entorno de ejecución de JavaScript).
