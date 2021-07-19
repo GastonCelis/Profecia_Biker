@@ -27,35 +27,50 @@ const Orders = ({cart, total, setCompra, clear}) => {
 
     const saveOrder = ()=>{
         setLoad(true)
-        const db = getFirestore()
-        const order = db.collection("orders");
-        const newOrder = {
-            buyer:{
-                email: datos.email,
-                nombre: datos.nombre,
-                telefono: datos.telefono
-            },
-            date: firebase.firestore.Timestamp.fromDate(new Date()),
-            items: cart,
-            total: total
-        }
-        order.add(newOrder).then(({id})=>{
-            setLoad(false);
-            setCompra(false);
+        if(datos.nombre === "" || datos.email === "" || datos.telefono === ""){
             swal.fire({
-                title: "¡Se realizó su compra!",
-                text: `El número de orden es: ${id}`,
-                icon: "success",
+                title: "¡Datos incompletos!",
+                text: "Complete todos los campos",
+                icon: "warning",
                 confirmButtonText: "Aceptar",
                 allowOutsideClick: false,
                 allowEscapeKey: false,
                 allowEnterKey: false
             });
-        }).catch((error)=>{
-            setLoad(false);
-            console.log(error);
-        });
-        clear()
+            setLoad(false)
+        }
+        else{
+            const db = getFirestore()
+            const order = db.collection("orders");
+            const newOrder = {
+                buyer:{
+                    email: datos.email,
+                    nombre: datos.nombre,
+                    telefono: datos.telefono
+                },
+                date: firebase.firestore.Timestamp.fromDate(new Date()),
+                items: cart,
+                total: total
+            }
+            order.add(newOrder).then(({id})=>{
+                setLoad(false);
+                setCompra(false);
+                swal.fire({
+                    title: "¡Se realizó su compra!",
+                    text: `El número de orden es: ${id}`,
+                    icon: "success",
+                    confirmButtonText: "Aceptar",
+                    allowOutsideClick: false,
+                    allowEscapeKey: false,
+                    allowEnterKey: false
+                });
+            }).catch((error)=>{
+                setLoad(false);
+                console.log(error);
+            });
+            clear()
+        }
+        
     };
 
     return (

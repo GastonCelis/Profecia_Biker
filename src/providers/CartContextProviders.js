@@ -51,7 +51,7 @@ const CartContextProviders = ({ defaultValue = [], children }) => {
         
     }
 
-    function clear(){
+    function clearButton() {
         if(cart.length !== 0){
             Swal.fire({
                 title: '¿Desa vaciar el carrito?',
@@ -78,6 +78,11 @@ const CartContextProviders = ({ defaultValue = [], children }) => {
         }
     }
 
+    function clear(){
+        setCart([])
+    }
+    
+
     function addItem(items){
         if(isInCart(items) === true){
             console.log("El Producto ya esta en el carrito")
@@ -89,7 +94,7 @@ const CartContextProviders = ({ defaultValue = [], children }) => {
 
 
     return (
-        <CartContext.Provider value={{cart, addItem, removeItem, clear, compra, setCompra, botonCompra, total,  cartSize: cart.length}}>
+        <CartContext.Provider value={{cart, addItem, removeItem, clear, compra, setCompra, botonCompra, total, clearButton,  cartSize: cart.length}}>
             {children}
         </CartContext.Provider>
     )

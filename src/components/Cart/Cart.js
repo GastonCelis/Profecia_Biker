@@ -4,12 +4,12 @@ import Orders from '../Orders/Orders'
 import "./Cart.css"
 
 const Cart = () => {
-    const {cart, removeItem, clear, compra, botonCompra, total, setCompra} = useContext(CartContext)
+    const {cart, removeItem, clear, compra, botonCompra, total, setCompra, clearButton} = useContext(CartContext)
 
     return (
         <div className="cart">
             <div className="container-botones-cart">
-                <button type="button" className="btn btn-danger boton-vaciar-comprar" onClick={clear}>Vaciar el Carrito</button>
+                <button type="button" className="btn btn-danger boton-vaciar-comprar" onClick={()=> clearButton()}>Vaciar el Carrito</button>
                 <h2>TOTAL: $ {total}</h2>
                 <button type="button" className="btn btn-success boton-vaciar-comprar" onClick={()=> botonCompra()}>Comprar</button>
             </div>
